@@ -12,6 +12,7 @@ body{
 }
 .kanban {
 	width: 900px;
+	flex-direction: row;
 }
 
 /* .kanban_column:not(:last-child) {
@@ -63,13 +64,28 @@ body{
 	z-index: 900;
 }
 
+@media (min-width: 700px) and (max-width: 1007px){
+
+	.kanban_column_title.sticky-top{
+		top: 134px;
+	}
+	.kanban {
+		/* flex-direction: column; */
+		width: 100%;
+	}
+	.kanban_column:not(:last-child) {
+		margin-bottom: 48px;
+	}
+}
+
 @media only screen and (max-width:700px){
 	.kanban_outer {
 		min-height: initial;
+		width: 100%;
 	}
 	.kanban {
 		flex-direction: column;
-		width: 900px;
+		width: 100%;
 	}
 	.kanban_column_title.sticky-top{
 		top: 127px;
